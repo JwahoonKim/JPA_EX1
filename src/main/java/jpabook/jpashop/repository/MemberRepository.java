@@ -17,7 +17,7 @@ public class MemberRepository {
         // @PersistenceContext
         // private EntityManager em;
 
-    // 2. 생성자를 이용해서 주입하기. -> 스프링 부트가 em도 편리하게 주입할 수 있도록 기능 제공
+    // 2. 생성자를 만들어주는 어노테이션을 사용해 주입하기. -> 스프링 부트가 em도 편리하게 주입할 수 있도록 기능 제공
         // 1) em을 final로 등록하고
         // 2) @RequiredArgsConstructor을 사용하면 -> final 키워드로 된 필드를 가지고 생성자를 만들어줌
         // 3) 생성자 주입과 같은 효과
