@@ -6,13 +6,15 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
-@Transactional
+@SpringBootTest // 스프링 부트 띄우고 테스트 -> Autowired 사용 가능
+@Transactional // 테스트 실행마다 트랙잭션을 시작하고 테스트가 끝나면 롤백
+//@Rollback(false) // 롤백 하기 싫으면 이 어노테이션을!
 class MemberServiceTest {
 
     @Autowired MemberRepository memberRepository;
